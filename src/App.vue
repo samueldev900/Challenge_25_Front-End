@@ -1,16 +1,16 @@
 <script setup>
-  import InfoText01 from '../src/components/InfoText01.vue';
+  import Formulario from './components/Formulario.vue';
+  import Result from './components/Result.vue';
 
 </script>
 
 <template>
 
-  <main class="p-5">
-    <h1 class="text-3xl font-extrabold text-cor5">Mortage Calculator</h1>
+  <main>
 
-    <p class="border-cor5 w-16 text-sm text-cor5 border-b my-5">Clear All</p>
-    
-    <InfoText01/>
+    <Formulario/>
+
+    <Result/>
 
   </main>
 
@@ -21,6 +21,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
 
 
+*{
+  padding: 0;
+  margin: 0;
+}
 body{
   font-family: "Plus Jakarta Sans", sans-serif;
   font-optical-sizing: auto;
