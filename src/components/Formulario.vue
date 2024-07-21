@@ -1,11 +1,19 @@
 <script>
     export default {
-    data() {
-        return {
-        selectedOption: '' // Inicialmente nenhum rádio está selecionado
-        };
-    }
+  data() {
+    return {
+      selectedOption: '', // Inicialmente nenhum rádio está selecionado
+      amount: 0 // Inicialmente o valor do input é 0
     };
+  },
+  methods: {
+    checkAmount() {
+      if (this.amount > 50) {
+        this.amount = 50;
+      }
+    }
+  }
+};
 </script>
 
 <template>
@@ -26,7 +34,7 @@
             <div class="my-4 ">
                 <label class="p-2" for="amount">Mortage Term</label>
                 <div class="rounded-lg border border-gray-300 w-80 h-12  flex bg-white justify-between overflow-hidden">
-                    <input type="text" name="amount" class="outline-none w-72 p-4">
+                    <input type="number" v-model.number="amount" @input="checkAmount" class="outline-none w-72 p-4" max="50">
                     <div class="bg-cor1 w-16 flex items-center justify-center font-bold p-4">
                         Years
                     </div>
@@ -35,7 +43,7 @@
             <div class="my-4">
                 <label class="" for="amount">Interest Rate</label>
                 <div class="rounded-lg border border-gray-300 w-80 h-12  flex bg-white justify-between overflow-hidden">
-                    <input type="text" name="amount" class="outline-none w-72 p-4">
+                    <input type="number" name="amount" class="outline-none w-72 p-4">
                     <div class="bg-cor1 w-16 flex items-center justify-center font-bold p-4">
                         %
                     </div>
