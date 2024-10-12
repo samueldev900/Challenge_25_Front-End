@@ -1,5 +1,19 @@
 <script>
-
+ export default {
+  data() {
+    return {
+      selectedOption: '',
+      amount: 0 
+    };
+  },
+  methods: {
+    checkAmount() {
+      if (this.amount > 50) {
+        this.amount = 50;
+      }
+    }
+  }
+};
 </script>
 
 <template>
@@ -12,15 +26,12 @@
           <h1 class="text-cor1">Your monthly repayments</h1 >
           <p class="text-4xl font-bold border-b border-cor4 py-4 text-cor6">£1,797.74</p>
 
-
           <div class="my-5">
             <p class="text-cor3">Total you'll repay over the term</p>
             <p class="text-2xl font-bold  text-cor1 my-2">£539,322.94</p>
           </div>
         </div>
-
     </div>
-
 </template>
 
 <style>

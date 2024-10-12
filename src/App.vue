@@ -1,6 +1,7 @@
 <script setup>
   import Formulario from './components/Formulario.vue';
   import Result from './components/Result.vue';
+  import WaitResult from './components/WaitResult.vue';
 
 </script>
 
@@ -9,9 +10,7 @@
   <main>
 
     <Formulario/>
-
-    <Result/>
-
+    
   </main>
 
 
